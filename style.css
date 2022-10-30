@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: #000000;
+  overflow-x: hidden;
+}
+header img {
+  object-fit: contain;
+  width: 100px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+.menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+  font-size: larger;
+}
+
+.body_main {
+  color: white;
+}
+
+.box-content > h3 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.body_main > h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.boxContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.box {
+  position: absolute;
+  width: 430px;
+  height: 160px;
+  align-items: center;
+  padding: 30px 10px;
+  display: flex;
+  gap: 30px;
+  background-color: #060606;
+  border-radius: 10px;
+}
+.boxAndHover {
+  padding: 5px 15px 5px 5px;
+  width: 440px;
+  height: 220px;
+  border-radius: 10px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.boxAndHover:hover {
+  background-image: linear-gradient(
+    90deg,
+    #00c0ff 0%,
+    #ffcf00 49%,
+    #fc4f4f 80%,
+    #00c0ff 100%
+  );
+  animation: slidebg 1s linear infinite;
+}
+@keyframes slidebg {
+  to {
+    background-position: 20vw;
+  }
+}
+
+.follow {
+  margin-top: 40px;
+}
+
+.follow a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.box > img {
+  object-fit: contain;
+  width: 150px;
+}
+
+.box-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.box-content > p {
+  padding: 10px;
+}
+
+.buttonInt > button {
+  color: white;
+  font-size: medium;
+  background-color: #111111;
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.buttonInt {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+  header {
+    position: relative;
+  }
+  body {
+    margin: 0;
+  }
+  header {
+    margin: 5px;
+  }
+  header img {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: absolute;
+    top: 84px;
+    margin: 0;
+    background-color: black;
+    width: 100%;
+
+    justify-content: start;
+  }
+  .hamburger {
+    display: block;
+    object-fit: contain;
+    width: 50px;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .body_main {
+    margin-top: 200px;
+  }
+
+  .humburger.active {
+    display: block;
+  }
+  .body_main {
+  }
+
+  .boxContainer {
+    margin: 10px;
+  }
+
+  .boxAndHover {
+    width: 40%;
+    height: 360px;
+    margin: 10px;
+    padding: 5px 18px 48px 6px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+    height: 343px;
+    background-color: #060606;
+  }
+
+  .box-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .box-content > p span {
+    display: none;
+  }
+  .buttonInt > button {
+    font-size: small;
+  }
+
+  .body_main > h1 {
+    font-size: 25px;
+  }
+}
